@@ -8,6 +8,7 @@ import { connectDB } from './config/db.js';
 import doctorRouter from './routes/doctorRouter.js';
 import serviceRouter from './routes/serviceRouter.js';
 import appointmentRouter from './routes/appointmentRouter.js';
+import serviceAppointmentRouter from './routes/serviceAppointmentRouter.js';
 
 const app = express();
 const port = 4000;
@@ -25,6 +26,7 @@ connectDB();
 app.use("/api/doctors", doctorRouter);
 app.use("/api/services", serviceRouter);
 app.use("/api/appointments", appointmentRouter);
+app.use("/api/service-appointments", serviceAppointmentRouter);
 
 app.get('/', (req,res) => {
     res.send("API Working");
