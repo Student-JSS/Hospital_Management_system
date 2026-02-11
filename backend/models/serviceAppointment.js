@@ -132,7 +132,7 @@ const serviceAppointmentSchema = new mongoose.Schema({
 
 serviceAppointmentSchema.index({date: 1, status:1});
 serviceAppointmentSchema.index({serviceId:1});
-serviceAppointmentSchema.index({"payment.sessionId": 1});
+// payment.sessionId already has `index: true` in the schema field; avoid duplicate index declaration
 
 const ServiceAppointment = mongoose.models.ServiceAppointment || mongoose.model("ServiceAppointment", serviceAppointmentSchema);
 
