@@ -2,6 +2,9 @@ import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Hero from "./pages/Hero";
 import { useUser } from "@clerk/clerk-react";
+import { Home } from "lucide-react";
+
+
 
 function RequireAuth({ children }) {
   const { isLoaded, isSignedIn } = useUser();
@@ -26,7 +29,7 @@ function RequireAuth({ children }) {
         </div>
       </div>
     );
-    return children;
+  return children;
 }
 
 const App = () => {
@@ -34,6 +37,14 @@ const App = () => {
     <div>
       <Routes>
         <Route path="/" element={<Hero />} />
+        <Route
+          path="/h"
+          element={
+            <RequireAuth>
+              <Home />
+            </RequireAuth>
+          }
+        />
       </Routes>
     </div>
   );
