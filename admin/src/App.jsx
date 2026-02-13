@@ -2,9 +2,7 @@ import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Hero from "./pages/Hero";
 import { useUser } from "@clerk/clerk-react";
-import { Home } from "lucide-react";
-
-
+import Home from "./pages/Home";
 
 function RequireAuth({ children }) {
   const { isLoaded, isSignedIn } = useUser();
@@ -45,6 +43,7 @@ const App = () => {
             </RequireAuth>
           }
         />
+        
       </Routes>
     </div>
   );
