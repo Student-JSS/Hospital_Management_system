@@ -376,7 +376,7 @@ const DashboardPage = () => {
 
           <div className={s.mobileDoctorContainer}>
             <div className={s.mobileDoctorGrid}>
-              {visibleDoctors.map((id) => (
+              {visibleDoctors.map((d) => (
                 <MobileDoctorCard key={d.id} d={d} />
               ))}
             </div>
@@ -416,7 +416,7 @@ function StatsCard({ icon, label, value }) {
   );
 }
 
-function MobileDoctorCard({ id }) {
+function MobileDoctorCard({ d }) {
   return (
     <div className={s.mobileDoctorCard}>
       <div className={s.mobileDoctorHeader}>
