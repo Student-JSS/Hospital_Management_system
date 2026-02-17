@@ -94,6 +94,15 @@ const App = () => {
             </RequireAuth>
           }
         />
+
+        <Route
+          path="/add-service/:serviceId"
+          element={
+            <RequireAuth>
+              <AddSer/>
+            </RequireAuth>
+          }
+        />
         
       </Routes>
     </div>
