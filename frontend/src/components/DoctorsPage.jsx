@@ -153,7 +153,12 @@ const DoctorsPage = () => {
 
       <div className={doctorsPageStyles.wrapper}>
         <div className={doctorsPageStyles.headerContainer}>
-          <h1 className={doctorsPageStyles.headerTitle}>Our Medical Experts</h1>
+          <div style={{ paddingTop: "100px" }}>
+            <h1 className={doctorsPageStyles.headerTitle}>
+              Our Medical Experts
+            </h1>
+          </div>
+
           <p className={doctorsPageStyles.headerSubtitle}>
             Find your ideal doctor by name or specialization.
           </p>

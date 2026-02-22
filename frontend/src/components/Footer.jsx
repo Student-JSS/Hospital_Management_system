@@ -1,4 +1,4 @@
-import React, { Activity } from "react";
+import React from "react";
 import { footerStyles } from "../assets/dummyStyles";
 import logo from "../assets/logo.png";
 import {
@@ -13,6 +13,7 @@ import {
   Stethoscope,
   Twitter,
   Youtube,
+  Activity,
 } from "lucide-react";
 
 const Footer = () => {
@@ -28,7 +29,7 @@ const Footer = () => {
 
   const services = [
     { name: "Blood Pressure Check", href: "/services" },
-    { name: "Blood Sugar Test", href: "/services" },
+    // { name: "Blood Sugar Test", href: "/services" },
     { name: "Full Blood Count", href: "/services" },
     { name: "X-Ray Scan", href: "/services" },
     { name: "Blood Sugar Test", href: "/services" },
@@ -160,7 +161,7 @@ const Footer = () => {
             <h3 className={footerStyles.sectionTitle}>Our Services</h3>
             <ul className={footerStyles.linksList}>
               {services.map((service, index) => (
-                <li key={service.name}>
+                <li key={index}>
                   <a href={service.href} className={footerStyles.serviceLink}>
                     <div className={footerStyles.serviceIcon}></div>
                     <span>{service.name}</span>

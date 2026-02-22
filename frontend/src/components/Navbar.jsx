@@ -74,7 +74,8 @@ const Navbar = () => {
 
   return (
     <div className={navbarStyles.navbarBorder}>
-      <nav ref={navRef}
+      <nav
+        ref={navRef}
         className={`${navbarStyles.navbarContainer} ${
           showNavbar ? navbarStyles.navbarVisible : navbarStyles.navbarHidden
         }`}
@@ -139,7 +140,7 @@ const Navbar = () => {
                   onClick={() => clerk.openSignIn()}
                   className={navbarStyles.loginButton}
                 >
-                  <key className={navbarStyles.loginIcon} />
+                  <SignalHighIcon className={navbarStyles.loginIcon} />
                   Login
                 </button>
               </SignedOut>
@@ -208,7 +209,6 @@ const Navbar = () => {
         </div>
         <style>{navbarStyles.animationStyles}</style>
       </nav>
-      
     </div>
   );
 };

@@ -5,6 +5,7 @@ import Doctors from './pages/Doctors';
 import DoctorDetails from './pages/DoctorDetails';
 import Service from './pages/Service';
 import ServiceDetail from './pages/ServiceDetailPage';
+import Contact from './pages/Contact';
 
 const App = () => {
   return (
@@ -15,8 +16,10 @@ const App = () => {
          <Route path='/doctors/:id' element={<DoctorDetails/>}/>
          <Route path='/services' element={<Service/>}/>
          <Route path='/services/:id' element={<ServiceDetail/>}/>
+         <Route path='/contact' element={<Contact/>}/>
       </Routes>
     </div>
+    
   )
 }
 

@@ -182,7 +182,9 @@ const ServicePage = ({ previewCount = 9999 }) => {
     <div className={servicePageStyles.pageContainer}>
       <div className={servicePageStyles.maxWidthContainer}>
         <header className={servicePageStyles.header}>
+          <div style={{ paddingTop: "100px" }}>
           <h1 className={servicePageStyles.title}>Our Diagnostic Services</h1>
+          </div>
           <p className={servicePageStyles.subtitle}>
             Safe, accurate & reliable testing.
           </p>
