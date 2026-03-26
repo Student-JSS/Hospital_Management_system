@@ -495,7 +495,7 @@ const AppointmentPage = () => {
         )}
         <div className={appointmentPageStyles.doctorGrid}>
           {appointmentData.map((item) => (
-            <div key={item.id} className={cardStyles.doctorGrid}>
+            <div key={item.id} className={cardStyles.doctorCard}>
               <div className={cardStyles.doctorImageContainer}>
                 <img
                   src={item.image || "/placeholder-doctor.png"}

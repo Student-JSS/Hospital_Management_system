@@ -252,7 +252,7 @@ export const getDoctors = async (req, res) => {
 export async function getDoctorsById(req, res) {
   try {
     const { id } = req.params;
-    const doc = await Doctor.findById(id).select("password").lean();
+    const doc = await Doctor.findById(id).select("-password").lean();
     if (!doc)
       return res.status(400).json({
         success: false,
@@ -360,7 +360,7 @@ export async function deleteDoctor(req, res) {
       }
     }
     await Doctor.findByIdAndDelete(id);
-    return res.status({ success: true, message: "Doctor Removed" });
+    return res.json({ success: true, message: "Doctor Removed" });
   } catch (err) {
     console.error("deleteDoctor error:", err);
     return res.status(500).json({ success: false, message: "Server error" });
@@ -394,7 +394,7 @@ export async function toggleAvailability(req, res) {
     await doc.save();
     const out = normalizeDocForClient(doc.toObject());
     delete out.password;
-    return res.status.json({ success: true, data: out });
+    return res.json({ success: true, data: out });
   } catch (err) {
     console.error("toggleAvailability error:", err);
     return res.status(500).json({ success: false, message: "Server error" });

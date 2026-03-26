@@ -235,7 +235,7 @@ const HomeDoctors = ({ previewCount = 8 }) => {
                           disabled
                           className={homeDoctorsStyles.buttonAvailable}
                         >
-                          <MousePointer20ff className="w-5 h-5" />
+                          <MousePointer className="w-5 h-5" />
                           Not Available
                         </button>
                       )}
